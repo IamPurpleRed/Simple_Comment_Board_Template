@@ -1,0 +1,21 @@
+{
+  "name": "SimpleCommentBoard",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.17.3"
+  },
+  "description": "簡易線上匿名留言板，搭配Firebase & Heroku",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "PurpleRed",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.10.0",
+    "serve-favicon": "^2.5.0"
+  }
+}

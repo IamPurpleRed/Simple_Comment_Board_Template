@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  max-width: calc(100vw - var(--scrollbar-width));
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: "Noto Sans TC";
+  color: #fff;
+}
+
+html {
+  width: calc(100vw - var(--scrollbar-width));
+  min-height: 100vh;
+  background: linear-gradient(15deg, #231572, #25beda);
+}
+
+body {
+  width: calc(100vw - var(--scrollbar-width));
+
+  #bg {
+    z-index: -1;
+    position: fixed;
+    width: 90%;
+    max-width: 600px;
+    bottom: 0;
+    right: 0;
+  }
+
+  .zone {
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    margin-left: 15px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 5px solid #22cccc;
+    font-size: 22px;
+  }
+
+  .block {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  #top {
+    margin-top: 10px;
+
+    h2 {
+      margin-left: 5px;
+      margin-bottom: 10px;
+    }
+
+    #intro {
+      margin: 0 10px;
+    }
+  }
+
+  #input_zone {
+    #form {
+      background: #fff;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+
+      .input_field {
+        position: relative;
+        font-size: 16px;
+        color: #111;
+      }
+
+      .textbox_field {
+        width: 100%;
+        height: 70px;
+        margin: 0;
+
+        input {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+          width: 100%;
+          border: 1px solid #111;
+          border-radius: 4px;
+          padding: 5px;
+          background: transparent;
+          color: #555;
+        }
+
+        span {
+          position: absolute;
+          display: inline-block;
+          bottom: 1px;
+          left: 1px;
+          padding: 5px;
+          color: #555;
+          transition: 0.5s;
+        }
+
+        input:focus~span,
+        input:valid~span {
+          transition: 0.5s;
+          transform: translateX(-5px) translateY(-30px);
+        }
+      }
+
+      #isPrivate_field {
+        margin-top: 10px;
+
+        label {
+          transition: 0.5s;
+          margin-left: 5px;
+          color: #999;
+        }
+
+        #isPrivate:checked~label {
+          transition: 0.5s;
+          color: #111;
+        }
+      }
+
+      #send_field {
+        margin: 10px 0;
+        display: flex;
+        flex-direction: row-reverse;
+
+        input {
+          width: 30%;
+          height: 30px;
+          background: #fff;
+          border-radius: 4px;
+          font-size: 16px;
+        }
+
+        #send_enable {
+          color: #111;
+          border: 1px solid #555;
+        }
+
+        #send_disable {
+          color: #aaa;
+          border: 1px solid #aaa;
+        }
+      }
+    }
+  }
+
+  #message_zone {
+    height: 10vh;
+
+    div {
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    #msg_success {
+      background: rgba(28, 199, 5, 0.8);
+    }
+
+    #msg_warning {
+      background: rgba(255, 187, 0, 0.8);
+    }
+
+    #msg_error {
+      background: rgba(252, 51, 1, 0.8);
+
+    }
+  }
+
+  #comment_zone {
+    .block {
+      position: relative;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      border-left: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(3px);
+
+      .no {
+        position: absolute;
+        top: 0px;
+        right: 15px;
+        font-family: "Alfa Slab One";
+        font-size: 50px;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .author {
+        position: relative;
+        font-size: 24px;
+        font-weight: 700;
+        word-wrap: break-word;
+      }
+
+      .line {
+        position: relative;
+        width: 70%;
+        height: 3px;
+        margin: 5px 0;
+        background: linear-gradient(90deg, #ffffff, #ffffff00);
+        border-radius: 5px;
+      }
+
+      .content {
+        position: relative;
+        margin: 10px 0 20px;
+        word-wrap: break-word;
+      }
+
+      .date {
+        position: relative;
+      }
+    }
+  }
+
+  #footer {
+    width: 100%;
+    height: 5vh;
+    margin-top: 20vh;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+
+    p {
+      height: 5vh;
+      padding: 1vh 0;
+    }
+  }
+}
